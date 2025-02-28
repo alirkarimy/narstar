@@ -71,7 +71,7 @@ public class RedGreenLight : MonoBehaviour
     public void TurnRed()
     {
         TurnTo(LightColor.Red);
-        if(index++ > 0)
+        if(index == 1)
             OnRed?.Invoke();
 
         Invoke("TurnGreen", redTime);

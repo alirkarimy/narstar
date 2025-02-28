@@ -28,5 +28,9 @@ public class ChatBox : MonoBehaviour
             currentMessageIndex++;
             textTyper.StartTyping(messages[currentMessageIndex]);
         }
+        else
+        {
+            gameObject.SetActive(false);
+        }
     }
 }

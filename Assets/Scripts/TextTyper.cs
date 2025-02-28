@@ -9,7 +9,9 @@ public class TextTyper : MonoBehaviour
 
     public void StartTyping(string text)
     {
+        StopAllCoroutines();
         StartCoroutine(TypeText(text));
+
     }
 
     private IEnumerator TypeText(string text)

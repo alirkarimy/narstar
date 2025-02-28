@@ -26878,6 +26878,14 @@ PrefabInstance:
       propertyPath: m_hasFontAssetChanged
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3897348183773729861, guid: d4557adabbd7de744b3cb42e7aeb92b0, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 640
+      objectReference: {fileID: 0}
+    - target: {fileID: 3897348183773729861, guid: d4557adabbd7de744b3cb42e7aeb92b0, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1124
+      objectReference: {fileID: 0}
     - target: {fileID: 7483506213847719977, guid: d4557adabbd7de744b3cb42e7aeb92b0, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -27588,6 +27596,14 @@ PrefabInstance:
     - target: {fileID: 3525931829134993353, guid: be9cd7a0d7adc064ba212bd9b85fdf6c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3747063915868531809, guid: be9cd7a0d7adc064ba212bd9b85fdf6c, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 640
+      objectReference: {fileID: 0}
+    - target: {fileID: 3747063915868531809, guid: be9cd7a0d7adc064ba212bd9b85fdf6c, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1124
       objectReference: {fileID: 0}
     - target: {fileID: 9064119843113194165, guid: be9cd7a0d7adc064ba212bd9b85fdf6c, type: 3}
       propertyPath: m_Name
@@ -63259,6 +63275,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1330435826182094824, guid: fa7172cdcb456ca4baaa6b5bbbc121e8, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1330435826182094824, guid: fa7172cdcb456ca4baaa6b5bbbc121e8, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 640
+      objectReference: {fileID: 0}
+    - target: {fileID: 1330435826182094824, guid: fa7172cdcb456ca4baaa6b5bbbc121e8, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1124
+      objectReference: {fileID: 0}
     - target: {fileID: 3796300716188064076, guid: fa7172cdcb456ca4baaa6b5bbbc121e8, type: 3}
       propertyPath: m_Name
       value: JoysticCanvas
@@ -77740,6 +77768,14 @@ PrefabInstance:
     - target: {fileID: 3675712726244518410, guid: 019890878cb0fb14abe5b670e515f2c3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5351896877010081245, guid: 019890878cb0fb14abe5b670e515f2c3, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 640
+      objectReference: {fileID: 0}
+    - target: {fileID: 5351896877010081245, guid: 019890878cb0fb14abe5b670e515f2c3, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1124
       objectReference: {fileID: 0}
     - target: {fileID: 7634975897445081458, guid: 019890878cb0fb14abe5b670e515f2c3, type: 3}
       propertyPath: m_Name

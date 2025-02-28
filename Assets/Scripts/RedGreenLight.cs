@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class RedGreenLight : MonoBehaviour
@@ -18,6 +19,7 @@ public class RedGreenLight : MonoBehaviour
     public GameObject hud;
     public TextMeshProUGUI timerText;
     public float timer;
+    public UnityEvent OnGreen, OnRed, OnYellow;
     private void OnEnable()
     {
         TurnGreen();
@@ -29,6 +31,7 @@ public class RedGreenLight : MonoBehaviour
     public void TurnGreen()
     {
         TurnTo(LightColor.Green);
+        OnGreen?.Invoke();
         Invoke("TurnYellow", greenTime);
         timer = greenTime;
         timerText.transform.parent.gameObject.SetActive(true);
@@ -55,6 +58,8 @@ public class RedGreenLight : MonoBehaviour
     public void TurnYellow()
     {
         TurnTo(LightColor.Yellow);
+        OnYellow?.Invoke();
+
         Invoke("TurnRed", 1);
         lights[1].light.color = lights[1].on;
 
@@ -65,6 +70,8 @@ public class RedGreenLight : MonoBehaviour
     public void TurnRed()
     {
         TurnTo(LightColor.Red);
+        OnRed?.Invoke();
+
         Invoke("TurnGreen", redTime);
         lights[0].light.color = lights[0].on;
 

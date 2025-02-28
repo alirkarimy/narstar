@@ -12,6 +12,11 @@ public class Player : MonoBehaviour
     }
 
 
+    public void Teleport(Transform point)
+    {
+        transform.position = point.position;
+    }
+
     public void OnInteract(IInteractable interactable)
     {
         if (interactable != null)

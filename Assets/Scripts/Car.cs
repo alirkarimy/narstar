@@ -40,7 +40,7 @@ public class Car : MonoBehaviour,IInteractable
     public void Interact(GameObject interactedObject)
     {
         if(interactedObject.TryGetComponent<Player>(out Player player)){
-
+            if (!IsDangerous) return;
             player.Die();
         }
     }

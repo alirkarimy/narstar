@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
 public class ChatBox : MonoBehaviour
@@ -12,6 +13,7 @@ public class ChatBox : MonoBehaviour
             "Have a great day!"
         };  // Array of messages to display
     private int currentMessageIndex = 0; // Index of the current message
+    public UnityEvent OnChatEnd;
 
     private void Start()
     {
@@ -30,6 +32,7 @@ public class ChatBox : MonoBehaviour
         }
         else
         {
+            OnChatEnd?.Invoke();
             gameObject.SetActive(false);
         }
     }

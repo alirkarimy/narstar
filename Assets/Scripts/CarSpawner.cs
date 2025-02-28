@@ -8,14 +8,15 @@ public class CarSpawner : MonoBehaviour
     public float spawnTimer = 2;
     public int index = 0;
     public Transform spawnPoint;
+    public RedGreenLight light;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     IEnumerator Start()
     {
         while (true)
         {
-            while (spawn == false) yield return null;
-            Instantiate(cars[index % cars.Length - 1], spawnPoint);
+            while (light.lightColor == RedGreenLight.LightColor.Red) yield return null;
+            Instantiate(cars[index++ % cars.Length ],spawnPoint.position,spawnPoint.rotation).GetComponent<Car>().Init(light);
             yield return new WaitForSeconds(spawnTimer);
         }
     }

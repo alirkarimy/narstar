@@ -20,7 +20,7 @@ public class RedGreenLight : MonoBehaviour
     public TextMeshProUGUI timerText;
     public float timer;
     public UnityEvent OnGreen, OnRed, OnYellow;
-    public int index = 0;
+     int index = 0;
     private void OnEnable()
     {
         TurnGreen();

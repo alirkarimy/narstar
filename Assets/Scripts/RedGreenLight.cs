@@ -24,6 +24,7 @@ public class RedGreenLight : MonoBehaviour
     private void OnEnable()
     {
         TurnGreen();
+        index++;
     }
     private void TurnTo(LightColor lightCol)
     {
@@ -71,7 +72,7 @@ public class RedGreenLight : MonoBehaviour
     public void TurnRed()
     {
         TurnTo(LightColor.Red);
-        if(index == 1)
+        if(index == 2)
             OnRed?.Invoke();
 
         Invoke("TurnGreen", redTime);

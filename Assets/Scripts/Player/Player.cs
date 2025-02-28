@@ -2,14 +2,21 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    
+
+
+    public Animator animator;
+
+    public void Die()
+    {
+        animator.CrossFade("Die", 0.2f);
+    }
 
 
     public void OnInteract(IInteractable interactable)
     {
         if (interactable != null)
         {
-            interactable.Interact();
+            interactable.Interact(gameObject);
         }
     }
 

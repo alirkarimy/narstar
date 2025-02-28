@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Car : MonoBehaviour
+public class Car : MonoBehaviour,IInteractable
 {
     public float speed = 3;
     public float turq = 20;
@@ -35,5 +35,13 @@ public class Car : MonoBehaviour
     private void SelfDestruct()
     {
         Destroy(this.gameObject);
+    }
+
+    public void Interact(GameObject interactedObject)
+    {
+        if(interactedObject.TryGetComponent<Player>(out Player player)){
+
+            player.Die();
+        }
     }
 }

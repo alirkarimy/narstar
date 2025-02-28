@@ -76,14 +76,14 @@ public class PlayerMovementController : MonoBehaviour
     void FixedUpdate()
     {
         direction = Vector3.forward * variableJoystick.Vertical + Vector3.right * variableJoystick.Horizontal;
-        if (direction != Vector3.zero) transform.forward = -direction;
+        if (direction != Vector3.zero) transform.forward = direction;
 
         speed =Mathf.Abs(variableJoystick.Horizontal) + Mathf.Abs(variableJoystick.Vertical);
         speed *= maxSpeed;
         speed = Mathf.Clamp(speed, 0f, maxSpeed);
         speed = Mathf.SmoothDamp(anim.GetFloat("Speed"), speed, ref velocity, 0.1f);
         anim.SetFloat("Speed", speed );
-        rb.linearVelocity = (-direction * speed *40* moveIndicator * Time.fixedDeltaTime);
+        rb.linearVelocity = (direction * speed *40* moveIndicator * Time.fixedDeltaTime);
     }
 
 
